@@ -10,7 +10,6 @@ esp32:
     type: esp-idf
 
 wifi:
-
 api:
 logger:
 
@@ -20,3 +19,10 @@ esp32_ble_tracker:
 
 bluetooth_proxy:
   active: true
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time 
+
+web_server:
+  local: true
