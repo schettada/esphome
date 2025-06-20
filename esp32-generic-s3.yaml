@@ -10,8 +10,14 @@ esp32:
     type: esp-idf
 
 wifi:
+
 api:
+
 logger:
+
+ota:
+  - platform: esphome
+    id: ota_esphome
 
 esp32_ble_tracker:
   scan_parameters:
