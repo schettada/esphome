@@ -1,0 +1,22 @@
+esphome:
+  name: esp32-bluetooth-proxy
+  friendly_name: Bluetooth Proxy
+  min_version: 2025.5.0
+  name_add_mac_suffix: true
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+wifi:
+
+api:
+logger:
+
+esp32_ble_tracker:
+  scan_parameters:
+    active: true
+
+bluetooth_proxy:
+  active: true
