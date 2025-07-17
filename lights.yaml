@@ -2,7 +2,8 @@ light:
   - platform: esp32_rmt_led_strip
     rgb_order: GRB
     pin: ${gpio_pin}
-    num_leds: 1
+    num_leds: ${num_leds}
     chipset: ws2812
     name: "Status Light" 
     id: ${device_id}_light
+    color_correct: [30%, 30%, 30%]
