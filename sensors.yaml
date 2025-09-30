@@ -8,34 +8,6 @@ binary_sensor:
     icon: mdi:check-circle
 
 ################################################################################
-# Sensors
-################################################################################
-sensor:
-  - platform: uptime
-    name: "Uptime Sensor"
-    id: ${device_id}_uptime_sensor
-    update_interval: ${device_sampling_time}
-    internal: true
-    on_raw_value:
-      then:
-        - text_sensor.template.publish:
-            id: ${device_id}_uptime
-            state: !lambda |-
-              int seconds = round(id(${device_id}_uptime_sensor).raw_state);
-              int days = seconds / (24 * 3600);
-              seconds = seconds % (24 * 3600);
-              int hours = seconds / 3600;
-              seconds = seconds % 3600;
-              int minutes = seconds /  60;
-              seconds = seconds % 60;
-              return (
-                (days ? to_string(days) + "d " : "") +
-                (hours ? to_string(hours) + "h " : "") +
-                (minutes ? to_string(minutes) + "m " : "") +
-                (to_string(seconds) + "s")
-              ).c_str();
-
-################################################################################
 # Text Sensors
 ################################################################################
 text_sensor:
@@ -59,10 +31,9 @@ text_sensor:
     icon: mdi:package-variant-closed
     id: ${device_id}_esphome_version
 
-  ################################################################################
-  # Template Sensors
-  ################################################################################
-  - platform: template
+  - platform: uptime
     name: Uptime
     id: ${device_id}_uptime
-    icon: mdi:clock-start
+    format:
+      separator: " "
+      days: "D"    
