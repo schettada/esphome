@@ -17,4 +17,31 @@ binary_sensor:
     has_still_target:
       name: Still Target
     out_pin_presence_status:
-      name: Out pin presence status 
+      name: Out pin presence status
+
+switch:
+  - platform: ld2410
+    engineering_mode:
+      name: Engineering mode
+    bluetooth:
+      name: Control bluetooth
+
+button:
+  - platform: ld2410
+    factory_reset:
+      name: Factory reset
+    restart:
+      name: Restart
+    query_params:
+      name: Query params
+
+select:
+  - platform: ld2410
+    distance_resolution:
+      name: Distance resolution
+    baud_rate:
+      name: Baud rate
+    light_function:
+      name: Light function
+    out_pin_level:
+      name: Out pin level
