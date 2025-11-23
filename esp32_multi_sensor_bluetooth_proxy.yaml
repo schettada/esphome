@@ -87,4 +87,30 @@ sensor:
     address: 0x23
     update_interval: 60s
 
-  
+ switch:
+  - platform: ld2410
+    engineering_mode:
+      name: Engineering mode
+    bluetooth:
+      name: Control bluetooth
+
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: RGB
+    pin: GPIO21
+    num_leds: 1
+    chipset: ws2812
+    name: "Status"
+    id: ${device_id}_status_led
+
+button:
+  - platform: ld2410
+    factory_reset:
+      name: LD2410 Factory reset
+      id: ${device_id}_ld24_factory_reset
+    restart:
+      name: LD2410 Restart
+      id: ${device_id}_ld24_restart
+    query_params:
+      name: LD2410 Query params
+      id: ${device_id}_ld24_query_param 
