@@ -87,7 +87,7 @@ sensor:
     address: 0x23
     update_interval: 60s
 
- switch:
+switch:
   - platform: ld2410
     engineering_mode:
       name: Engineering mode
