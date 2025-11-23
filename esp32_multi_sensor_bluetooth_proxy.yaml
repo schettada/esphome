@@ -32,3 +32,59 @@ time:
 
 web_server:
   local: true
+
+ld2410:
+
+uart:
+  tx_pin: ${ld24_tx}
+  rx_pin: ${ld24_rx}
+  baud_rate: 256000
+  parity: NONE
+  stop_bits: 1
+
+i2c:
+  - id: bus_a
+    sda: ${bme280_sda}
+    scl: ${bme280_scl}
+    scan: true
+  - id: bus_b
+    sda: ${bh1750_sda}
+    scl: ${bh1750_scl}
+    scan: true  
+
+binary_sensor:
+  - platform: ld2410
+    has_target:
+      name: Presence
+      id: ${device_id}_presence
+    has_moving_target:
+      name: Moving Target
+      id: ${device_id}_moving_target
+    has_still_target:
+      name: Still Target
+      id: ${device_id}_still_target
+    out_pin_presence_status:
+      name: Out pin presence status
+      id: ${device_id}_out_pin_presence_status
+
+sensor:
+  - platform: bme280_i2c
+    temperature:
+      name: "Temperature"
+      id: ${device_id}_temperature
+    pressure:
+      name: "Pressure"
+      id: ${device_id}_pressure
+    humidity:
+      name: "Humidity"
+      id: ${device_id}_humidity
+    i2c_id: bus_a
+    address: 0x76
+  - platform: bh1750
+    name: "Illuminance"
+    id: ${device_id}_illuminance
+    i2c_id: bus_b
+    address: 0x23
+    update_interval: 60s
+
+  
