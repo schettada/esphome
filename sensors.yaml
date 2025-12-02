@@ -24,13 +24,11 @@ text_sensor:
       name: ${device_friendly_name} MAC Address
       id: mac_address
       icon: mdi:router-wireless
-
   - platform: version
     name: ${device_friendly_name} ESPHome Version
     hide_timestamp: true
     icon: mdi:package-variant-closed
     id: esphome_version
-
   - platform: uptime
     name: ${device_friendly_name} Uptime
     id: uptime
@@ -38,4 +36,12 @@ text_sensor:
       separator: " "
       days: "D"    
 
+sensor:
+  - platform: template
+    id: esp_temperature
+    name: ESP Temperature
+    lambda: return temperatureRead();
+    unit_of_measurement: °C
+    device_class: TEMPERATURE
+    update_interval: 60s
 
