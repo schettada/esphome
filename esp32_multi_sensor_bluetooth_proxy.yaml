@@ -33,15 +33,6 @@ time:
 web_server:
   local: true
 
-ld2410:
-
-uart:
-  tx_pin: ${ld24_tx}
-  rx_pin: ${ld24_rx}
-  baud_rate: 256000
-  parity: NONE
-  stop_bits: 1
-
 i2c:
   - id: bus_a
     sda: ${bme280_sda}
@@ -51,21 +42,6 @@ i2c:
     sda: ${bh1750_sda}
     scl: ${bh1750_scl}
     scan: true  
-
-binary_sensor:
-  - platform: ld2410
-    has_target:
-      name: Presence
-      id: ${device_id}_presence
-    has_moving_target:
-      name: Moving Target
-      id: ${device_id}_moving_target
-    has_still_target:
-      name: Still Target
-      id: ${device_id}_still_target
-    out_pin_presence_status:
-      name: Out pin presence status
-      id: ${device_id}_out_pin_presence_status
 
 sensor:
   - platform: bme280_i2c
@@ -87,13 +63,6 @@ sensor:
     address: 0x23
     update_interval: 60s
 
-switch:
-  - platform: ld2410
-    engineering_mode:
-      name: Engineering mode
-    bluetooth:
-      name: Control bluetooth
-
 light:
   - platform: esp32_rmt_led_strip
     rgb_order: RGB
@@ -102,15 +71,3 @@ light:
     chipset: ws2812
     name: "Status"
     id: ${device_id}_status_led
-
-button:
-  - platform: ld2410
-    factory_reset:
-      name: LD2410 Factory reset
-      id: ${device_id}_ld24_factory_reset
-    restart:
-      name: LD2410 Restart
-      id: ${device_id}_ld24_restart
-    query_params:
-      name: LD2410 Query params
-      id: ${device_id}_ld24_query_param 
