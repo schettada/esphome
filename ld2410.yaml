@@ -58,9 +58,6 @@ select:
     out_pin_level:
       name: Out pin level
       id: ${device_id}_ld24_out_pin_level
-    distance_resolution:
-      name: "LD2410 Distance Resolution"
-      id: ${device_id}_ld24_distance_resolution
 
 number:
   - platform: ld2410
