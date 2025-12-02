@@ -12,131 +12,131 @@ binary_sensor:
   - platform: ld2410
     has_target:
       name: ${device_friendly_name} Presence
-      id: ${device_id}_presence
+      id: presence
     has_moving_target:
       name: ${device_friendly_name} Moving Target
-      id: ${device_id}_moving_target
+      id: moving_target
     has_still_target:
       name: ${device_friendly_name} Still Target
-      id: ${device_id}_still_target
+      id: still_target
     out_pin_presence_status:
       name: ${device_friendly_name} Out pin presence status
-      id: ${device_id}_out_pin_presence_status
+      id: out_pin_presence_status
 
 switch:
   - platform: ld2410
     engineering_mode:
       name: LD2410 Engineering mode
-      id: ${device_id}_ld24_engineering_mode
+      id: ld24_engineering_mode
     bluetooth:
       name: LD2410 Control bluetooth
-      id: ${device_id}_ld24_control_bluetooth
+      id: ld24_control_bluetooth
 
 button:
   - platform: ld2410
     factory_reset:
       name: LD2410 Factory reset
-      id: ${device_id}_ld24_factory_reset
+      id: ld24_factory_reset
     restart:
       name: LD2410 Restart
-      id: ${device_id}_ld24_restart
+      id: ld24_restart
     query_params:
       name: LD2410 Query params
-      id: ${device_id}_ld24_query_param 
+      id: ld24_query_param 
 
 select:
   - platform: ld2410
     distance_resolution:
       name: LD2410 Distance resolution
-      id: ${device_id}_ld24_distance_resolution
+      id: ld24_distance_resolution
     baud_rate:
       name: LD2410 Baud rate
-      id: ${device_id}_ld24_baud_rate
+      id: ld24_baud_rate
     light_function:
       name: LD2410 Light function
-      id: ${device_id}_ld24_light_function
+      id: ld24_light_function
     out_pin_level:
       name: Out pin level
-      id: ${device_id}_ld24_out_pin_level
+      id: ld24_out_pin_level
 
 number:
   - platform: ld2410
     timeout:
       name: LD2410 Timeout
-      id: ${device_id}_ld24_timeout
+      id: ld24_timeout
     max_move_distance_gate:
       name: LD2410 Max Move Distance
-      id: ${device_id}_ld24_max_move_distance
+      id: ld24_max_move_distance
     max_still_distance_gate:
       name: LD2410 Max Still Distance
-      id: ${device_id}_ld24_max_still_distance
+      id: ld24_max_still_distance
     g0:
       move_threshold:
         name: g0 move threshold
-        id: ${device_id}_ld24_g0_move_threshold
+        id: ld24_g0_move_threshold
       still_threshold:
         name: g0 still threshold
-        id: ${device_id}_ld24_g0_still_threshold
+        id: ld24_g0_still_threshold
     g1:
       move_threshold:
         name: g1 move threshold
-        id: ${device_id}_ld24_g1_move_threshold
+        id: ld24_g1_move_threshold
       still_threshold:
         name: g1 still threshold
-        id: ${device_id}_ld24_g1_still_threshold
+        id: ld24_g1_still_threshold
     g2:
       move_threshold:
         name: g2 move threshold
-        id: ${device_id}_ld24_g2_move_threshold
+        id: ld24_g2_move_threshold
       still_threshold:
         name: g2 still threshold
-        id: ${device_id}_ld24_g2_still_threshold
+        id: ld24_g2_still_threshold
     g3:
       move_threshold:
         name: g3 move threshold
-        id: ${device_id}_ld24_g3_move_threshold
+        id: ld24_g3_move_threshold
       still_threshold:
         name: g3 still threshold
-        id: ${device_id}_ld24_g3_still_threshold
+        id: ld24_g3_still_threshold
     g4:
       move_threshold:
         name: g4 move threshold
-        id: ${device_id}_ld24_g4_move_threshold
+        id: ld24_g4_move_threshold
       still_threshold:
         name: g4 still threshold
-        id: ${device_id}_ld24_g4_still_threshold
+        id: ld24_g4_still_threshold
     g5:
       move_threshold:
         name: g5 move threshold
-        id: ${device_id}_ld24_g5_move_threshold
+        id: ld24_g5_move_threshold
       still_threshold:
         name: g5 still threshold
-        id: ${device_id}_ld24_g5_still_threshold
+        id: ld24_g5_still_threshold
     g6:
       move_threshold:
         name: g6 move threshold
-        id: ${device_id}_ld24_g6_move_threshold
+        id: ld24_g6_move_threshold
       still_threshold:
         name: g6 still threshold
-        id: ${device_id}_ld24_g6_still_threshold
+        id: ld24_g6_still_threshold
     g7:
       move_threshold:
         name: g7 move threshold
-        id: ${device_id}_ld24_g7_move_threshold
+        id: ld24_g7_move_threshold
       still_threshold:
         name: g7 still threshold
-        id: ${device_id}_ld24_g7_still_threshold
+        id: ld24_g7_still_threshold
     g8:
       move_threshold:
         name: g8 move threshold
-        id: ${device_id}_ld24_g8_move_threshold
+        id: ld24_g8_move_threshold
       still_threshold:
         name: g8 still threshold
-        id: ${device_id}_ld24_g8_still_threshold
+        id: ld24_g8_still_threshold
 # Setting ending of zone 1 occupancy
   - platform: template
     name: "LD2410 End Zone 1"
-    id: ${device_id}_ld24_radar_ez1
+    id: ld24_radar_ez1
     device_class: distance
     min_value: 0
     max_value: 600
@@ -151,7 +151,7 @@ number:
 # Setting ending of zone 2 occupancy
   - platform: template
     name: "LD2410 End Zone 2"
-    id: ${device_id}_ld24_ez2
+    id: ld24_ez2
     device_class: distance
     min_value: 0
     max_value: 600
@@ -166,7 +166,7 @@ number:
 # Setting ending of zone 3 occupancy
   - platform: template
     name: "LD2410 End Zone 3"
-    id: ${device_id}_ld24_ez3
+    id: ld24_ez3
     device_class: distance
     min_value: 0
     max_value: 600
@@ -183,85 +183,85 @@ text_sensor:
   - platform: ld2410
     version:
       name: "LD2410 Firmware Version"
-      id: ${device_id}_ld24_firmware
+      id: ld24_firmware
 
 sensor:
   - platform: ld2410
     moving_distance:
       name: LD2410 Moving Distance
-      id: ${device_id}_ld24_moving_distance
+      id: ld24_moving_distance
     still_distance:
       name: LD2410 Still Distance
-      id: ${device_id}_ld24_still_distance
+      id: ld24_still_distance
     moving_energy:
       name: LD2410 Move Energy
-      id: ${device_id}_ld24_move_energy
+      id: ld24_move_energy
     still_energy:
       name: LD2410 Still Energy
-      id: ${device_id}_ld24_still_energy
+      id: ld24_still_energy
     detection_distance:
       name: LD2410 Detection Distance
-      id: ${device_id}_ld24_detection_distance
+      id: ld24_detection_distance
     g0:
       move_energy:
         name: g0 move energy
-        id: ${device_id}_ld24_g0_move_energy
+        id: ld24_g0_move_energy
       still_energy:
         name: g0 still energy
-        id: ${device_id}_ld24_g0_still_energy
+        id: ld24_g0_still_energy
     g1:
       move_energy:
         name: g1 move energy
-        id: ${device_id}_ld24_g1_move_enrgy
+        id: ld24_g1_move_enrgy
       still_energy:
         name: g1 still energy
-        id: ${device_id}_ld24_g1_still_energy
+        id: ld24_g1_still_energy
     g2:
       move_energy:
         name: g2 move energy
-        id: ${device_id}_ld24_g2_move_energy
+        id: ld24_g2_move_energy
       still_energy:
         name: g2 still energy
-        id: ${device_id}_ld24_g2_still_energy
+        id: ld24_g2_still_energy
     g3:
       move_energy:
         name: g3 move energy
-        id: ${device_id}_ld24_g3_move_energy
+        id: ld24_g3_move_energy
       still_energy:
         name: g3 still energy
-        id: ${device_id}_ld24_g3_still_energy
+        id: ld24_g3_still_energy
     g4:
       move_energy:
         name: g4 move energy
-        id: ${device_id}_ld24_g4_move_energy
+        id: ld24_g4_move_energy
       still_energy:
         name: g4 still energy
-        id: ${device_id}_ld24_g4_still_energy
+        id: ld24_g4_still_energy
     g5:
       move_energy:
         name: g5 move energy
-        id: ${device_id}_ld24_g5_move_energy
+        id: ld24_g5_move_energy
       still_energy:
         name: g5 still energy
-        id: ${device_id}_ld24_g5_still_energy
+        id: ld24_g5_still_energy
     g6:
       move_energy:
         name: g6 move energy
-        id: ${device_id}_ld24_g6_move_energy
+        id: ld24_g6_move_energy
       still_energy:
         name: g6 still energy
-        id: ${device_id}_ld24_g6_still_energy
+        id: ld24_g6_still_energy
     g7:
       move_energy:
         name: g7 move energy
-        id: ${device_id}_ld24_g7_move_energy
+        id: ld24_g7_move_energy
       still_energy:
         name: g7 still energy
-        id: ${device_id}_ld24_g7_still_energy
+        id: ld24_g7_still_energy
     g8:
       move_energy:
         name: g8 move energy
-        id: ${device_id}_ld24_g8_move_energy
+        id: ld24_g8_move_energy
       still_energy:
         name: g8 still energy
-        id: ${device_id}_ld24_g8_still_energy
+        id: ld24_g8_still_energy
