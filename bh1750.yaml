@@ -1,1 +1,13 @@
+i2c:
+  - id: bus_b
+    sda: ${bh1750_sda}
+    scl: ${bh1750_scl}
+    scan: true  
 
+sensor:
+  - platform: bh1750
+    name: ${device_friendly_name} Illuminance
+    id: illuminance
+    i2c_id: bus_b
+    address: 0x23
+    update_interval: 60s
