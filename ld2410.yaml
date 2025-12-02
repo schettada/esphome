@@ -69,7 +69,7 @@ number:
       id: ${device_id}_ld24_max_move_distance
     max_still_distance_gate:
       name: LD2410 Max Still Distance
-      id: ${device_id}_ld24_max-still_distance
+      id: ${device_id}_ld24_max_still_distance
     g0:
       move_threshold:
         name: g0 move threshold
@@ -94,7 +94,7 @@ number:
     g3:
       move_threshold:
         name: g3 move threshold
-        id: ${device_id}_ld24_g3-move_threshold
+        id: ${device_id}_ld24_g3_move_threshold
       still_threshold:
         name: g3 still threshold
         id: ${device_id}_ld24_g3_still_threshold
