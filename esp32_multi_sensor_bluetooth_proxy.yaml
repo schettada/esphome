@@ -62,12 +62,3 @@ sensor:
     i2c_id: bus_b
     address: 0x23
     update_interval: 60s
-
-light:
-  - platform: esp32_rmt_led_strip
-    rgb_order: RGB
-    pin: GPIO21
-    num_leds: 1
-    chipset: ws2812
-    name: ${device_friendly_name} Status
-    id: ${device_id}_status_led
