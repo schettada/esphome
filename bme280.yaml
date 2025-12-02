@@ -1,15 +1,19 @@
 i2c:
   - id: bus_a
-    sda: ${i2c_sda}
-    scl: ${i2c_scl}
+    sda: ${bme280_sda}
+    scl: ${bme280_scl}
     scan: true
 
 sensor:
   - platform: bme280_i2c
     temperature:
-      name: "BME280 Temperature"
+      name: ${device_friendly_name} Temperature
+      id: ${device_id}_temperature
     pressure:
-      name: "BME280 Pressure"
+      name: ${device_friendly_name} Pressure
+      id: ${device_id}_pressure
     humidity:
-      name: "BME280 Humidity"
+      name: ${device_friendly_name} Humidity
+      id: ${device_id}_humidity
     i2c_id: bus_a
+    address: 0x76
