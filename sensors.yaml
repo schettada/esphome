@@ -35,12 +35,3 @@ text_sensor:
     format:
       separator: " "
       days: "D"    
-
-sensor:
-  - platform: template
-    id: esp_temperature
-    name: ESP Temperature
-    lambda: return temperatureRead();
-    unit_of_measurement: °C
-    device_class: TEMPERATURE
-    update_interval: 60s
