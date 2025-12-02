@@ -14,27 +14,28 @@ text_sensor:
   - platform: wifi_info
     ip_address:
       name: ${device_friendly_name} IP Address
-      id: ${device_id}_ip_address
+      id: ip_address
       icon: mdi:ip-network
     ssid:
       name: ${device_friendly_name} SSID
-      id: ${device_id}_connected_ssid
+      id: connected_ssid
       icon: mdi:wifi
     mac_address:
       name: ${device_friendly_name} MAC Address
-      id: ${device_id}_mac_address
+      id: mac_address
       icon: mdi:router-wireless
 
   - platform: version
     name: ${device_friendly_name} ESPHome Version
     hide_timestamp: true
     icon: mdi:package-variant-closed
-    id: ${device_id}_esphome_version
+    id: esphome_version
 
   - platform: uptime
     name: ${device_friendly_name} Uptime
-    id: ${device_id}_uptime
+    id: uptime
     format:
       separator: " "
       days: "D"    
+
 
