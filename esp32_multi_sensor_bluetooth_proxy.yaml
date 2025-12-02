@@ -32,33 +32,3 @@ time:
 
 web_server:
   local: true
-
-i2c:
-  - id: bus_a
-    sda: ${bme280_sda}
-    scl: ${bme280_scl}
-    scan: true
-  - id: bus_b
-    sda: ${bh1750_sda}
-    scl: ${bh1750_scl}
-    scan: true  
-
-sensor:
-  - platform: bme280_i2c
-    temperature:
-      name: ${device_friendly_name} Temperature
-      id: ${device_id}_temperature
-    pressure:
-      name: ${device_friendly_name} Pressure
-      id: ${device_id}_pressure
-    humidity:
-      name: ${device_friendly_name} Humidity
-      id: ${device_id}_humidity
-    i2c_id: bus_a
-    address: 0x76
-  - platform: bh1750
-    name: ${device_friendly_name} Illuminance
-    id: ${device_id}_illuminance
-    i2c_id: bus_b
-    address: 0x23
-    update_interval: 60s
