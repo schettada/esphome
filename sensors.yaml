@@ -31,7 +31,7 @@ text_sensor:
     id: esphome_version
   - platform: uptime
     name: ${device_friendly_name} Uptime
-    id: uptime
+    id: ${device_id}_uptime
     format:
       separator: " "
       days: "D"    
@@ -44,4 +44,5 @@ sensor:
     unit_of_measurement: °C
     device_class: TEMPERATURE
     update_interval: 60s
+
 
