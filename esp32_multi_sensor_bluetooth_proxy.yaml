@@ -46,18 +46,18 @@ i2c:
 sensor:
   - platform: bme280_i2c
     temperature:
-      name: "Temperature"
+      name: "${device_friendly_name} Temperature"
       id: ${device_id}_temperature
     pressure:
-      name: "Pressure"
+      name: "${device_friendly_name} Pressure"
       id: ${device_id}_pressure
     humidity:
-      name: "Humidity"
+      name: "${device_friendly_name} Humidity"
       id: ${device_id}_humidity
     i2c_id: bus_a
     address: 0x76
   - platform: bh1750
-    name: "Illuminance"
+    name: "${device_friendly_name} Illuminance"
     id: ${device_id}_illuminance
     i2c_id: bus_b
     address: 0x23
@@ -69,5 +69,5 @@ light:
     pin: GPIO21
     num_leds: 1
     chipset: ws2812
-    name: "Status"
+    name: "${device_friendly_name} Status"
     id: ${device_id}_status_led
