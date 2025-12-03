@@ -11,16 +11,16 @@ uart:
 binary_sensor:
   - platform: ld2410
     has_target:
-      name: ${device_friendly_name} Presence
+      name: Presence
       id: ld24_presence
     has_moving_target:
-      name: ${device_friendly_name} Moving Target
+      name: Moving Target
       id: ld24_moving_target
     has_still_target:
-      name: ${device_friendly_name} Still Target
+      name: Still Target
       id: ld24_still_target
     out_pin_presence_status:
-      name: ${device_friendly_name} Out pin presence status
+      name: Out pin presence status
       id: ld24_out_pin_presence_status
 
 sensor:
