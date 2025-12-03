@@ -19,13 +19,6 @@ ota:
   - platform: esphome
     id: ota_esphome
 
-esp32_ble_tracker:
-  scan_parameters:
-    active: true
-
-bluetooth_proxy:
-  active: true
-
 time:
   - platform: homeassistant
     id: homeassistant_time 
