@@ -1,0 +1,14 @@
+sensor:
+  - platform: vl53l0x
+    name: "Salt Level"
+    id: salt_level
+    address: 0x29
+    timeout: 60s
+    update_interval: 300s
+    unit_of_measurement: "m"
+    filters:
+      - filter_out: nan
+      - median:
+          window_size: 3
+          send_first_at: 1
+    accuracy_decimals: 2
