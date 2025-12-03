@@ -1,0 +1,38 @@
+################################################################################
+substitutions:
+  device_name: garage-aio
+  device_id: garage_aio
+  device_friendly_name: Garage AIO
+  device_sampling_time: 30s
+## Update Below Based on Your GPIO Mapping ##
+  led_gpio: GPIO21
+  num_leds: 1
+  rgb_order: RGB  
+  ld24_tx: GPIO43
+  ld24_rx: GPIO44
+  bme280_sda: GPIO08
+  bme280_scl: GPIO09
+  bh1750_sda: GPIO10
+  bh1750_scl: GPIO11
+
+packages:
+  esp32: github://schettada/esphome/esp32-s3.yaml
+  sensors: github://schettada/esphome/sensors.yaml
+  buttons: github://schettada/esphome/buttons.yaml
+  light: github://schettada/esphome/lights.yaml
+  ld2410: github://schettada/esphome/ld2410.yaml
+  bme280: github://schettada/esphome/bme280.yaml
+  bh1750: github://schettada/esphome/bh1750.yaml
+#  ble_proxy: github://schettada/esphome/ble-proxy.yaml
+  
+esphome:
+  name: ${device_name}
+  friendly_name: ${device_friendly_name}
+  name_add_mac_suffix: false
+
+esp32:
+  board: esp32-s3-devkitm-1
+
+api:
+  encryption:
+    key: "Generate and Paste Your Key"
