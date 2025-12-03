@@ -1,13 +1,14 @@
 button:
   - platform: safe_mode
-    name: ${device_friendly_name} Safe Mode Boot
+    name: Safe Mode Boot
     id: safe_mode
     
   - platform: factory_reset
-    name: ${device_friendly_name} Factory Reset
+    name: Factory Reset
     id: factory_reset
     
   - platform: restart
-    name: ${device_friendly_name} Restart
+    name: Restart
     id: restart
+
 
