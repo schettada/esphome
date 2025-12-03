@@ -4,6 +4,6 @@ light:
     pin: ${gpio_pin}
     num_leds: ${num_leds}
     chipset: ws2812
-    name: "${device_friendly_name} Status Light" 
+    name: Status Light
     id: esp32_status_light
     color_correct: [30%, 30%, 30%]
