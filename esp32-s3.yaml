@@ -30,3 +30,52 @@ time:
 web_server:
   local: true
 
+################################################################################
+# Binary Sensors
+################################################################################
+binary_sensor:
+  - platform: status
+    name: Status
+    id: esp32_status
+    icon: mdi:check-circle
+
+################################################################################
+# Text Sensors
+################################################################################
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP Address
+      id: ip_address
+      icon: mdi:ip-network
+    ssid:
+      name: SSID
+      id: connected_ssid
+      icon: mdi:wifi
+    mac_address:
+      name: MAC Address
+      id: mac_address
+      icon: mdi:router-wireless
+  - platform: version
+    name: ESPHome Version
+    hide_timestamp: true
+    icon: mdi:package-variant-closed
+    id: esphome_version
+  - platform: uptime
+    name: Uptime
+    id: esp32_uptime
+    format:
+      separator: " "
+      days: "D"    
+
+################################################################################
+# Buttons
+################################################################################
+button:
+  - platform: factory_reset
+    name: Factory Reset
+    id: esp32_factory_reset
+    
+  - platform: restart
+    name: Restart
+    id: esp32_restart      
