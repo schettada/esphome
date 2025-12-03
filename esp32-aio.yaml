@@ -1,5 +1,5 @@
 esphome:
-  name: esp32_aio
+  name: esp32-aio
   friendly_name: ESP32 AIO Sensor
   min_version: 2025.6.0
   name_add_mac_suffix: true
