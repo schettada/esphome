@@ -4,7 +4,7 @@
 binary_sensor:
   - platform: status
     name: Status
-    id: ${device_id}_status
+    id: esp32_status
     icon: mdi:check-circle
 
 ################################################################################
@@ -31,8 +31,9 @@ text_sensor:
     id: esphome_version
   - platform: uptime
     name: Uptime
-    id: ${device_id}_uptime
+    id: esp32_uptime
     format:
       separator: " "
       days: "D"    
+
 
