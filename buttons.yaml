@@ -1,12 +1,13 @@
 button:
   - platform: safe_mode
     name: ${device_friendly_name} Safe Mode Boot
-    id: esp32_safe_mode
+    id: safe_mode
     
   - platform: factory_reset
     name: ${device_friendly_name} Factory Reset
-    id: esp32_factory_reset
+    id: factory_reset
     
   - platform: restart
     name: ${device_friendly_name} Restart
-    id: esp32_restart
+    id: restart
+
