@@ -7,13 +7,13 @@ i2c:
 sensor:
   - platform: bme280_i2c
     temperature:
-      name: ${device_friendly_name} Temperature
+      name: Temperature
       id: bme280_temperature
     pressure:
-      name: ${device_friendly_name} Pressure
+      name: Pressure
       id: bme280_pressure
     humidity:
-      name: ${device_friendly_name} Humidity
+      name: Humidity
       id: bme280_humidity
     i2c_id: bus_a
     address: 0x76
