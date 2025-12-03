@@ -1,8 +1,4 @@
 button:
-  - platform: safe_mode
-    name: Safe Mode Boot
-    id: esp32_safe_mode
-    
   - platform: factory_reset
     name: Factory Reset
     id: esp32_factory_reset
@@ -10,6 +6,3 @@ button:
   - platform: restart
     name: Restart
     id: esp32_restart
-
-
-
