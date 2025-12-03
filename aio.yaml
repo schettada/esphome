@@ -17,8 +17,6 @@ substitutions:
 
 packages:
   esp32: github://schettada/esphome/esp32-s3.yaml
-  sensors: github://schettada/esphome/sensors.yaml
-  buttons: github://schettada/esphome/buttons.yaml
   light: github://schettada/esphome/lights.yaml
   ld2410: github://schettada/esphome/ld2410.yaml
   bme280: github://schettada/esphome/bme280.yaml
