@@ -29,7 +29,7 @@ esphome:
   name_add_mac_suffix: false
 
 esp32:
-  board: esp32-s3-devkitm-1
+  board: esp32-s3-devkitm-1 ## Update Your Board Type ##
 
 api:
   encryption:
