@@ -4,9 +4,9 @@ i2c:
 
 sensor:
   - platform: vl53l0x
-    name: "Salt Level"
-    id: salt_level
-    address: 0x29
+    name: ${vl53l0x_name}
+    id: ${vl53l0x_id}
+    address: ${vl53l0x_address}
     timeout: 60s
     update_interval: 300s
     unit_of_measurement: "m"
