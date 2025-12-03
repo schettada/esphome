@@ -1,3 +1,7 @@
+i2c:
+  sda: ${vl53l0x_sda}
+  scl: ${vl53l0x_scl}
+
 sensor:
   - platform: vl53l0x
     name: "Salt Level"
