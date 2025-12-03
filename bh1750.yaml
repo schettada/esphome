@@ -6,7 +6,7 @@ i2c:
 
 sensor:
   - platform: bh1750
-    name: ${device_friendly_name} Illuminance
+    name: Illuminance
     id: bh1750_illuminance
     i2c_id: bus_b
     address: 0x23
