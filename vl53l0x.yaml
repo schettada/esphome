@@ -5,7 +5,7 @@ i2c:
 sensor:
   - platform: vl53l0x
     name: ${vl53l0x_name}
-    id: ${vl53l0x_id}
+    id: "vl53l0x_range"
     address: ${vl53l0x_address}
     timeout: 60s
     update_interval: 300s
