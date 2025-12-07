@@ -14,7 +14,7 @@ sensor:
     unit_of_measurement: "%"
 
   - platform: vl53l0x
-    name: "${vl53l0x_name} Meters"
+    name: "${vl53l0x_name} in Meters"
     id: "vl53l0x_range_meters"
     address: ${vl53l0x_address}
     timeout: 60s
