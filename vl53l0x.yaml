@@ -12,6 +12,41 @@ sensor:
     filters:
       - lambda: return (${sensor_height}-x/${sensor_height}-0.1)*100;
     unit_of_measurement: "%"
+    on_value_range:
+      - above: 75.0
+        then: 
+          - light.turn_on: 
+              id: esp32_status_light
+              brightness: 100%
+              red: 0%
+              green: 100%
+              blue: 0%
+      - below: 74.9
+        above: 40.0          
+        then: 
+          - light.turn_on:
+              id: esp32_status_light
+              brightness: 100%
+              red: 100%
+              green: 100%
+              blue: 0%
+      - below: 39.9
+        above: 15          
+        then: 
+          - light.turn_on:
+              id: esp32_status_light
+              brightness: 100%
+              red: 100%
+              green: 75%
+              blue: 0%                              
+      - below: 14.9          
+        then: 
+          - light.turn_on:
+              id: esp32_status_light
+              brightness: 100%
+              red: 100%
+              green: 0%
+              blue: 0%   
 
   - platform: vl53l0x
     name: "${vl53l0x_name} in Meters"
