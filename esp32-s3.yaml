@@ -64,6 +64,7 @@ text_sensor:
   - platform: uptime
     name: Uptime
     id: esp32_uptime
+    update_interval: 3600s
     format:
       separator: " "
       days: "D"    
