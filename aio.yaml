@@ -35,4 +35,4 @@ esp32:
 
 api:
   encryption:
-    key: "Generate and Paste Your Key"
+    key: "Generate and Paste Your Key" ## https://esphome.io/components/api/
