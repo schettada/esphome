@@ -16,4 +16,4 @@ sensor:
       name: Humidity
       id: bme280_humidity
     i2c_id: bus_a
-    address: 0x76
+    address: ${bme280_address}
