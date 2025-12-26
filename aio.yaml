@@ -12,8 +12,10 @@ substitutions:
   ld24_rx: GPIO44
   bme280_sda: GPIO08
   bme280_scl: GPIO09
+  bme280_address: 0x76  
   bh1750_sda: GPIO10
   bh1750_scl: GPIO11
+  bh1750_address: 0x23
 
 packages:
   esp32: github://schettada/esphome/esp32-s3.yaml
