@@ -9,5 +9,5 @@ sensor:
     name: Illuminance
     id: bh1750_illuminance
     i2c_id: bus_b
-    address: 0x23
+    address: ${bh1750_address}
     update_interval: 60s
