@@ -1,0 +1,80 @@
+esphome:
+  name: esp8266
+  friendly_name: ESP8266
+  min_version: 2025.10.0
+  name_add_mac_suffix: true
+
+esp8266:
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  domain: !secret domain
+  fast_connect: True
+
+api:
+
+logger:
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time 
+
+web_server:
+  local: true
+
+################################################################################
+# Binary Sensors
+################################################################################
+binary_sensor:
+  - platform: status
+    name: Status
+    id: esp32_status
+    icon: mdi:check-circle
+
+################################################################################
+# Text Sensors
+################################################################################
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP Address
+      id: ip_address
+      icon: mdi:ip-network
+    ssid:
+      name: SSID
+      id: connected_ssid
+      icon: mdi:wifi
+    mac_address:
+      name: MAC Address
+      id: mac_address
+      icon: mdi:router-wireless
+  - platform: version
+    name: ESPHome Version
+    hide_timestamp: true
+    icon: mdi:package-variant-closed
+    id: esphome_version
+  - platform: uptime
+    name: Uptime
+    id: esp32_uptime
+    update_interval: 3600s
+    format:
+      separator: " "
+      days: "D"    
+
+################################################################################
+# Buttons
+################################################################################
+button:
+  - platform: factory_reset
+    name: Factory Reset
+    id: esp32_factory_reset
+    
+  - platform: restart
+    name: Restart
+    id: esp32_restart      
