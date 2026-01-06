@@ -14,6 +14,7 @@ wifi:
   password: !secret wifi_password
   domain: !secret domain
   fast_connect: True
+  min_auth_mode: WPA2
 
 api:
 
@@ -35,7 +36,7 @@ web_server:
 ################################################################################
 binary_sensor:
   - platform: status
-    name: Status
+    name: Connection Status
     id: esp32_status
     icon: mdi:check-circle
 
