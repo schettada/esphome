@@ -17,3 +17,7 @@ sensor:
       id: bme280_humidity
     i2c_id: bus_a
     address: ${bme280_address}
+  - platform: dew_point
+    name: "Dew point"
+    temperature: bme280_temperature
+    humidity: bme280_humidity
